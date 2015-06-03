@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"].value;
+    if (x == null ) {
+        alert("Inputs could not be blank");
+        return false;
+    }
+	else if (isNaN(x)){
+		alert("Inputs should be numbers");
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<form name="myForm" action="demo_form.asp"
+onsubmit="return validateForm()" method="post">
+<input type="text"> *<input type="text"> > <input type="text"> 
+<input type="submit" id="button" value="Check">
+</form>
+
+
+
+
+</body>
